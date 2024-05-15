@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import 'main.css';
+import Options from '../options/options';
+import './main.css';
 
 const MainScreen = (props) => {
     const base_options = {
         allowed: {
             all: true,
-            supply: false,
-            support: false,
-            defense: false,
-            orbital: false,
-            eagle: false,
+            supply: [ false, false, false, false ],
+            support: [ false, false, false, false ],
+            defense: [ false, false, false, false ],
+            orbital: [ false, false, false, false ],
+            eagle: [ false, false, false, false ],
         }
     };
 
@@ -20,7 +21,11 @@ const MainScreen = (props) => {
             <div className="title">
                 <h1>Helldivers 2 Loadout Randomizer</h1>
             </div>
-            <div className="options"></div>
+            <div className="options">
+                <Options options={options} changeOption={setOptions} />
+            </div>
         </div>
     )
 }
+
+export default MainScreen;
