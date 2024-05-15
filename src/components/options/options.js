@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
+import { Form, FormGroup, Input, Label } from 'reactstrap';
 import './options.css';
 
 const Options = (props) => {
@@ -36,7 +36,7 @@ const Options = (props) => {
 
     function renderGrid() {
         const gridRows = [];
-        for(const [key, val] of Object.entries(allowed)) {
+        for(const [key] of Object.entries(allowed)) {
             if (key === "all") continue;
             gridRows.push(
                 <div className='d-flex justify-content-between align-center strat-grid-row' key={`options-${key}`}>
