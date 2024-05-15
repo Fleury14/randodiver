@@ -6,7 +6,7 @@ const randomizer = (options) => {
         const result = [];
         let tempStrat = stratagems;
         for (let i = 0; i < 4; i++) {
-            const rand = Math.floor(Math.random() * stratagems.length);
+            const rand = Math.floor(Math.random() * tempStrat.length);
             result.push(tempStrat[rand]);
             tempStrat = tempStrat.filter((val, index) => index !== rand);
         }
