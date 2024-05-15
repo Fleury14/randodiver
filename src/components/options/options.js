@@ -39,7 +39,7 @@ const Options = (props) => {
         for(const [key, val] of Object.entries(allowed)) {
             if (key === "all") continue;
             gridRows.push(
-                <div className='d-flex justify-content-between align-center strat-grid-row'>
+                <div className='d-flex justify-content-between align-center strat-grid-row' key={`options-${key}`}>
                         <p>{key}</p>
                         <FormGroup check inline>
                             <Input disabled={allowed.all} checked={allowed[key][0]} type="checkbox" onChange={() => changeGrid(key, 0)}/>

@@ -9,7 +9,6 @@ const randomizer = (options) => {
             const rand = Math.floor(Math.random() * stratagems.length);
             result.push(tempStrat[rand]);
             tempStrat = tempStrat.filter((val, index) => index !== rand);
-            console.log(tempStrat.length);
         }
         return result;
     }

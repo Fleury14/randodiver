@@ -9,7 +9,6 @@ const Loadout = (props) => {
 
     function randomize() {
         const result = randomizer(options);
-        console.log(result);
         setLoadout(result);
     }
 
