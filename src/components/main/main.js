@@ -17,7 +17,7 @@ const MainScreen = (props) => {
     const [options, setOptions] = useState(base_options);
 
     return (
-        <div>
+        <div className="main">
             <div className="title">
                 <h1>Helldivers 2 Loadout Randomizer</h1>
             </div>

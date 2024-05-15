@@ -41,7 +41,7 @@ const Options = (props) => {
         for(const [key, val] of Object.entries(allowed)) {
             if (key === "all") continue;
             gridRows.push(
-                <div className='d-flex strat-grid-row'>
+                <div className='d-flex justify-content-between align-center strat-grid-row'>
                         <p>{key}</p>
                         <FormGroup check inline>
                             <Input disabled={allowed.all} checked={allowed[key][0]} type="checkbox" onChange={() => changeGrid(key, 0)}/>
@@ -68,39 +68,20 @@ const Options = (props) => {
     return (
         <div>
             <Form>
-                <div>
+                <div className="options-full-rando">
                     <FormGroup check inline>
                         <Input checked={allowed.all} onChange={changeFull} type="checkbox" />
                         <Label check>Full Randomization</Label>
                     </FormGroup>
                 </div>
                 <div className='d-flex flex-column'>
-                    <div className='d-flex strat-grid-row'>
+                    <div className='d-flex justify-content-between align-center strat-grid-row'>
                         <p></p>
                         <p>Stratagem 1</p>
                         <p>Stratagem 2</p>
                         <p>Stratagem 3</p>
                         <p>Stratagem 4</p>
                     </div>
-                    {/* <div className='d-flex strat-grid-row'>
-                        <p>Support</p>
-                        <FormGroup check inline>
-                            <Input disabled={allowed.all} checked={allowed.support[0]} type="checkbox" onChange={() => changeGrid("support", 0)}/>
-                            <Label hidden>Stratagem 1 Support</Label>
-                        </FormGroup>
-                        <FormGroup check inline>
-                            <Input disabled={allowed.all} checked={allowed.support[1]} type="checkbox" onChange={() => changeGrid("support", 1)}/>
-                            <Label hidden>Stratagem 2 Support</Label>
-                        </FormGroup>
-                        <FormGroup check inline>
-                            <Input disabled={allowed.all} checked={allowed.support[2]} type="checkbox" onChange={() => changeGrid("support", 2)}/>
-                            <Label hidden>Stratagem 3 Support</Label>
-                        </FormGroup>
-                        <FormGroup check inline>
-                            <Input disabled={allowed.all} checked={allowed.support[3]} type="checkbox" onChange={() => changeGrid("support", 3)}/>
-                            <Label hidden>Stratagem 4 Support</Label>
-                        </FormGroup>
-                    </div> */}
                     {renderGrid()}
                 </div>
             </Form>
