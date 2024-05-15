@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Options from '../options/options';
+import Loadout from '../loadout/loadout';
 import './main.css';
 
 const MainScreen = (props) => {
@@ -23,6 +24,9 @@ const MainScreen = (props) => {
             </div>
             <div className="options">
                 <Options options={options} changeOption={setOptions} />
+            </div>
+            <div className="loadout">
+                <Loadout options={options} />
             </div>
         </div>
     )

@@ -6,8 +6,6 @@ const Options = (props) => {
     const { options, changeOption } = props;
     const { allowed } = options;
 
-    console.log('toptios from option page', options, options.allowed)
-
     function changeFull() {
         const newVal = {
             ...options,

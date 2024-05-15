@@ -1,0 +1,18 @@
+.loadout-stratagem {
+    text-align: center;
+}
+
+.loadout-container {
+    padding: 50px;
+    /* margin-top: 50px; */
+}
+
+.loadout-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.loadout-item-title {
+    font-size: 18px;
+    font-weight: 600;
+}
