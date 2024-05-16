@@ -25,8 +25,8 @@ const randomizer = (options) => {
 
         for (let i = 0; i < 4; i++) {
             // filter by options, then by the name
-            let tempStrat = stratagems.filter(strat => options.allowed[strat.type][i] === true);
-            tempStrat.filter(strat => names.indexOf(strat.name) < 1);
+            let tempStrat = stratagems.filter(strat => options.allowed[strat.type][i] === true && names.indexOf(strat.name) < 0);
+            
             // pick one, store both strategem AND name
             const rand = Math.floor(Math.random() * tempStrat.length);
             const selected = tempStrat[rand];
