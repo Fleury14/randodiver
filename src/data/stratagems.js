@@ -24,7 +24,7 @@ const stratagems = [
         tier: 2
     },
     {
-        name: "Siheld Generator",
+        name: "Shield Generator",
         type: "supply",
         backpack: 1,
         tier: 4
