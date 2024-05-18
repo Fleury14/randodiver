@@ -12,7 +12,8 @@ const MainScreen = (props) => {
             defense: [ false, false, false, false ],
             orbital: [ false, false, false, false ],
             eagle: [ false, false, false, false ],
-        }
+        },
+        oneBackpack: false,
     };
 
     const [options, setOptions] = useState(base_options);

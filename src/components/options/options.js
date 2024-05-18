@@ -18,6 +18,15 @@ const Options = (props) => {
         changeOption(newVal);
     }
 
+    function changeBackpack() {
+        const newVal = {
+            ...options,
+            oneBackpack: !options.oneBackpack
+            
+        };
+        changeOption(newVal);
+    }
+
     function changeGrid(key, index) {
         if (!allowed[key]) {
             throw new Error("Invalid key sent in grid change function");
@@ -70,6 +79,12 @@ const Options = (props) => {
                     <FormGroup check inline>
                         <Input checked={allowed.all} onChange={changeFull} type="checkbox" />
                         <Label check>Full Randomization</Label>
+                    </FormGroup>
+                </div>
+                <div className="options-backpack-rando">
+                    <FormGroup check inline>
+                        <Input checked={options.oneBackpack} onChange={changeBackpack} type="checkbox" />
+                        <Label check>Limit backpack items to 1</Label>
                     </FormGroup>
                 </div>
                 <div className='d-flex flex-column'>
